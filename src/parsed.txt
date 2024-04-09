@@ -1,0 +1,15 @@
+(chunk local_declaration: 
+
+    (variable_declaration 
+        (assignment_statement 
+            (variable_list name: (identifier)) 
+            (expression_list value: (table_constructor)))) 
+
+    (function_declaration 
+        name: (dot_index_expression 
+            table: (identifier) 
+            field: (identifier)) 
+        parameters: (parameters) 
+        body: (block (return_statement (expression_list (number)))))
+    
+)

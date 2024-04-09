@@ -1,0 +1,142 @@
+{
+  "name": "terra-syntax-highlighting",
+  "displayName": "terra-syntax-highlighting",
+  "description": "Highlighting for the terra language.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Rene Hiemstra",
+    "email": "rrhiemstar@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "Syntax",
+    "Highlighter",
+    "Highlight",
+    "Highlighting",
+    "Coloring",
+    "Tree-Sitter",
+    "Parser",
+    "C",
+    "Lua"
+  ],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:terra"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "terra",
+        "extensions": [".t"]
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "punctuation",
+        "description": "Punctuation symbols"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "scopes": {
+          "punctuation": [
+            "punctuation"
+          ],
+          "type.modification": [
+            "storage.modifier"
+          ]
+        }
+      }
+    ],
+    "configuration": {
+      "title": "{Syntax Highlighter} configuration",
+      "properties": {
+        "syntax.highlightComment": {
+          "description": "Enable highlighting of comments",
+          "type": "boolean",
+          "default": true
+        },
+        "syntax.highlightLanguages": {
+          "description": "Enabled languages",
+          "type": "array",
+          "default": [
+            "c",
+            "cpp",
+            "terra"
+          ]
+        },
+        "syntax.highlightTerms": {
+          "description": "Enabled terms",
+          "type": "array",
+          "default": [
+            "type",
+            "scope",
+            "function",
+            "variable",
+            "number",
+            "string",
+            "comment",
+            "constant",
+            "directive",
+            "control",
+            "operator",
+            "modifier",
+            "punctuation"
+          ]
+        },
+        "syntax.debugHover": {
+          "description": "Show tool-tip with syntax scope on hover",
+          "type": "boolean",
+          "default": false
+        },
+        "syntax.debugDepth": {
+          "description": "Depth of syntax scope in debug tools",
+          "type": "integer",
+          "default": -1
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "vscode:package": "node ./node_modules/.bin/vsce package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./scripts/build.js",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "@vscode/vsce": "^2.24.0",
+    "eslint": "^8.57.0",
+    "ovsx": "^0.9.0",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-c": "^0.21.0",
+    "tree-sitter-cli": "^0.22.2",
+    "tree-sitter-cpp": "^0.21.0",
+    "tree-sitter-terra": "github:renehiemstra/tree-sitter-terra",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.1",
+    "web-tree-sitter": "^0.22.2"
+  }
+}
