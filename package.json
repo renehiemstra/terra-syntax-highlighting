@@ -28,8 +28,7 @@
     "Lua"
   ],
   "activationEvents": [
-    "onLanguage:c",
-    "onLanguage:cpp",
+    "onLanguage:lua",
     "onLanguage:terra"
   ],
   "main": "./out/extension.js",
@@ -37,7 +36,9 @@
     "languages": [
       {
         "id": "terra",
-        "extensions": [".t"]
+        "extensions": [
+          ".t"
+        ]
       }
     ],
     "semanticTokenTypes": [
@@ -70,8 +71,7 @@
           "description": "Enabled languages",
           "type": "array",
           "default": [
-            "c",
-            "cpp",
+            "lua",
             "terra"
           ]
         },
@@ -132,6 +132,7 @@
     "tree-sitter-c": "^0.21.0",
     "tree-sitter-cli": "^0.22.2",
     "tree-sitter-cpp": "^0.21.0",
+    "tree-sitter-lua": "github:renehiemstra/tree-sitter-lua",
     "tree-sitter-terra": "github:renehiemstra/tree-sitter-terra",
     "typescript": "^5.3.3"
   },
