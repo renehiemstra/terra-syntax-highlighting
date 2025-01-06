@@ -2,12 +2,14 @@
   "name": "terra-syntax-highlighting",
   "displayName": "terra-syntax-highlighting",
   "description": "Highlighting for the terra language.",
-  "version": "0.0.1",
+  "repository": "https://github.com/renehiemstra/terra-syntax-highlighting",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Rene Hiemstra",
     "email": "rrhiemstar@gmail.com"
   },
+  "publisher": "ReneHiemstra",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -24,8 +26,8 @@
     "Coloring",
     "Tree-Sitter",
     "Parser",
-    "C",
-    "Lua"
+    "Lua",
+    "Terra"
   ],
   "activationEvents": [
     "onLanguage:lua",
@@ -128,12 +130,6 @@
     "@vscode/vsce": "^2.24.0",
     "eslint": "^8.57.0",
     "ovsx": "^0.9.0",
-    "tree-sitter": "^0.21.1",
-    "tree-sitter-c": "^0.21.0",
-    "tree-sitter-cli": "^0.22.2",
-    "tree-sitter-cpp": "^0.21.0",
-    "tree-sitter-lua": "github:renehiemstra/tree-sitter-lua",
-    "tree-sitter-terra": "github:renehiemstra/tree-sitter-terra",
     "typescript": "^5.3.3"
   },
   "dependencies": {
