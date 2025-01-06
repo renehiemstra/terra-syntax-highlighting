@@ -3,7 +3,7 @@
   "displayName": "terra-syntax-highlighting",
   "description": "Highlighting for the terra language.",
   "repository": "https://github.com/renehiemstra/terra-syntax-highlighting",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Rene Hiemstra",
